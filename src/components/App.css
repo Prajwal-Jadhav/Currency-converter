@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.heading {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 40px;
+}
+
+.input {
+  padding: 8px;
+  width: 150px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+}
+
+.select {
+  margin-left: 15px;
+  padding: 8px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+}
+
+.equals {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 20px 0;
+}
