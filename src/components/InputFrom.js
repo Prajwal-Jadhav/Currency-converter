@@ -11,7 +11,19 @@ class InputFrom extends React.Component {
     this.props.onInput(event.target.value);
   };
 
+  onSelectChange = event => {
+    this.props.onSelectInputFrom(event.target.value);
+  };
+
   render() {
+    const renderedList = this.props.selectOptions.map((item, index) => {
+      return (
+        <option key={index} value={item}>
+          {item}
+        </option>
+      );
+    });
+
     return (
       <div>
         <input
@@ -20,8 +32,13 @@ class InputFrom extends React.Component {
           value={this.state.inputValue || ""}
           onChange={this.onInputChange}
         />
-        <select name="convertfrom" id="convertfrom" className="select">
-          <option value="USD">USD</option>
+        <select
+          name="convertfrom"
+          id="convertfrom"
+          className="select"
+          onChange={this.onSelectChange}
+        >
+          {renderedList}
         </select>
       </div>
     );
